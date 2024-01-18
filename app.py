@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_compress import Compress
 import pandas as pd
-import numpy as np
 
 app = Flask(__name__)
 Compress(app)
