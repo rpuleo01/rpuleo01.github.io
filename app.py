@@ -17,7 +17,7 @@ def send_file(path):
 @app.route('/data')
 def data():
     try:
-        df = pd.read_csv('simple_relations.csv')
+        df = pd.read_csv('data/simple_relations.csv')
         #df = df.drop(columns=['content', 'reduced_text', 'relations'])
         df = df.rename(columns={'source': 'from', 'target': 'to'})
         df = df.where(pd.notnull(df), None)
